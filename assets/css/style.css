@@ -1,0 +1,94 @@
+/********************************/
+/*       Global Styles          */
+/********************************/
+:root {
+    /* Color setup */
+    --primary-color: #A554E6;
+    --secondary-color: #344054;
+
+    /* Font Color */
+    --txt-main: #000000;
+    --txt-sec: var(--secondary-color);
+    --txt-muted: ;
+
+
+    /* Typography */
+    --font-main: "poppins", sans-serif;
+    --font-sec: "inter", sans-serif;
+
+
+    /* Font */
+
+    --h1: 56px;
+    --h1-line: 84px;
+
+    --h2: 56px;
+    --h2-line: 84px;
+
+    --h3: 56px;
+    --h3-line: 84px;
+
+    --p1: 20px;
+    --p1-line: 24px;
+
+    --p2: 18px;
+    --p2-line: 28px;
+
+    --p3: 16px;
+    --p3-line: 24px;
+
+
+    --border-radius: 20px;
+
+}
+
+
+
+/********************************/
+/*        Global Styles          */
+/********************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D0D5DD;
+    font-family: var(--font-main);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.btn {
+    border: 1px solid var(--secondary-color);
+    border-radius: 24px;
+    color: black;
+}
+
+.btn-primary {
+    border: 1px solid var(--primary-color);
+    border-radius: 24px;
+    color: var(--primary-color);
+}
+
+.btn-outline {
+    border: 1px solid var(--primary-color);
+    border-radius: 24px;
+    color: var(--primary-color);
+}
+
+/********************************/
+/*        Header Styles         */
+/********************************/
+
+
+
+
+/********************************/
+/*         Styles          */
+/********************************/
