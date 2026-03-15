@@ -5,6 +5,7 @@
     /* Color setup */
     --primary-color: #A554E6;
     --secondary-color: #344054;
+    /* gray-700 */
     --lite: white;
 
     /* Font Color */
@@ -12,6 +13,12 @@
     --txt-sec: var(--secondary-color);
     --txt-muted: ;
 
+    /* Font Gradient */
+    --text-gradient: linear-gradient(90deg,
+            #2B034D 0%,
+            #B564F7 42%,
+            #D37EF0 82%,
+            #EF90FF 100%);
 
     /* Typography */
     --font-main: "poppins", sans-serif;
@@ -23,11 +30,11 @@
     --h1: 56px;
     --h1-line: 84px;
 
-    --h2: 56px;
-    --h2-line: 84px;
+    --h2: 48px;
+    --h2-line: 65px;
 
-    --h3: 56px;
-    --h3-line: 84px;
+    /* --h3: 56px;
+    --h3-line: 84px; */
 
     --h5: 20px;
     --h5-line: 24px;
@@ -38,6 +45,7 @@
 
     --p2: 16px;
     --p2-line: 24px;
+
 
 
     --border-radius: 20px;
@@ -60,6 +68,7 @@
 body {
     background-color: #D0D5DD;
     font-family: var(--font-main);
+    overflow-x: hidden;
 }
 
 h1 {
@@ -67,8 +76,18 @@ h1 {
     line-height: var(--h1-line);
 }
 
+h2 {
+    font-size: var(--h2);
+    line-height: var(--h2-line);
+}
+
+h5 {
+    font-size: var(--h5);
+    line-height: var(--h5-line);
+}
+
 p {
-    font-size: var(--p2-line);
+    font-size: var(--p2);
     line-height: var(--p2-line);
 }
 
@@ -78,8 +97,8 @@ p {
 }
 
 .btn {
+    background-color: transparent;
     border: 1px solid #D0D5DD;
-    background-color: var(--lite);
     border-radius: 24px;
     padding: 8px 27px;
     color: black;
@@ -91,14 +110,13 @@ p {
 .btn-outline {
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
-    background-color: var(--lite);
 
 }
 
 .btn-primary {
     border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-
+    background-image: linear-gradient(to top, #6A2F9B, #B564F7);
+    color: var(--lite);
 }
 
 .flex {
@@ -117,9 +135,7 @@ p {
 
 
 
-.border {
-    border: 2px solid red;
-}
+
 
 /********************************/
 /*        Header Styles         */
@@ -173,11 +189,132 @@ nav {
 }
 
 /********************************/
-/*         Styles          */
+/*    Hero Section Styles       */
 /********************************/
+.hero {
+    padding: 80px 0 60px;
+}
 
+.badge {
+    width: fit-content;
+    background-color: var(--lite);
+    border-radius: var(--border-radius);
+    padding: 8px 16px;
+    color: var(--secondary-color);
+}
 
+.badge p {
+    font-size: var(--p2);
+    padding: 0 10px 0;
+}
 
+.top-container {
+    flex-direction: row;
+    gap: 28px;
+}
+
+.hero-content h2 {
+    margin: 12px 0;
+}
+
+.hero-content h2>span {
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-content h2>span:last-child {
+    color: #D32E23;
+}
+
+.hero-content>p {
+    font-family: var(--font-sec);
+    font-size: var(--p1);
+    line-height: 32px;
+    margin-bottom: 28px;
+}
+
+.hero-image {
+    gap: 20px;
+}
+
+.hero-image img {
+    border-radius: var(--border-radius);
+}
+
+.bottom-wrapper {
+    justify-self: end;
+
+}
+
+.bottom-container {
+    flex: 1;
+    width: 33%;
+    margin-top: 36px;
+    padding: 20px 24px;
+    border-radius: var(--border-radius);
+    background-color: var(--lite);
+}
+
+.bottom-container>h5 {
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.social-icons {
+    gap: 32px;
+}
+
+.outer-cicle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #E6E6E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-cicle {
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lite);
+}
+
+.insta-bg {
+    background: linear-gradient(45deg,
+            #FEE411 0%,
+            #FEDB16 5%,
+            #FEC125 14%,
+            #FE983D 25%,
+            #FE5F5E 38%,
+            #FE2181 50%,
+            #9000DC 100%);
+}
+
+.fb-bg {
+    background-color: #1877F2;
+}
+
+.x {
+    background-color: var(--txt-main);
+}
+
+.yt-bg {
+    color: #F61C0D;
+    font-size: 27px;
+}
+
+.linked-in {
+    background-color: #007AB9;
+}
 
 
 
@@ -185,21 +322,31 @@ nav {
 
 
 /********************************/
-/* Responsive For Mobile Device */
+/*    Responsive For Tablet     */
 /********************************/
-@media screen and (max-width:992px) {
+@media screen and (max-width: 1024px) {
+    :root {
+        --h1: 42px;
+        --h1-line: 58px;
+
+        --h2: 36px;
+        --h2-line: 48px;
+
+        --p1: 16px;
+        --p1-line: 26px;
+    }
+
     .container {
-        padding: 0 16px;
+        padding: 0 32px;
     }
 
     .nav-actions {
         background-color: var(--lite);
-        /* margin: 0 auto; */
         flex-direction: column;
         align-items: center;
         position: fixed;
-        padding:12px 0;
-        top: 8vh;
+        padding: 20px 0;
+        top: 70px;
         right: -100%;
         width: 100%;
         transition: 0.4s ease-in-out;
@@ -212,12 +359,12 @@ nav {
 
     .nav-links {
         flex-direction: column;
+        margin: 20px 0;
     }
 
-    .nav-btns{
+    .nav-btns {
         display: flex;
-        flex-direction: row !important;
-        /* margin-bottom: 34px; */
+        gap: 10px;
     }
 
     .toggle {
@@ -226,4 +373,108 @@ nav {
         outline: none;
         z-index: 101;
     }
+
+    /*  Hero   */
+    .top-container {
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .badge {
+        width: fit-content;
+        /* margin-top: 16px; */
+    }
+
+    .hero-content {
+        width: 65%;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        margin-top: 16px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-image img:last-child {
+        display: none;
+    }
+
+    .bottom-wrapper {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .bottom-container {
+        width: 45%;
+    }
+}
+
+/********************************/
+/*    Responsive For Mobile     */
+/********************************/
+@media screen and (max-width:768px) {
+    :root {
+        --h1: 32px;
+        --h1-line: 44px;
+
+        --h2: 28px;
+        --h2-line: 38px;
+
+        --p1: 15px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .top-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-content h2 {
+        margin: 0 auto;
+    }
+
+    .hero-content>p {
+        margin: 16px 0;
+    }
+
+    .badge {
+        width: fit-content;
+        margin: 16px auto;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .bottom-wrapper {
+        justify-self: center;
+    }
+
+    .bottom-container {
+        width: fit-content;
+        margin-top: 20px;
+        padding: 14px 16px;
+        margin: 16px 16px 0;
+
+    }
+
+    .social-icons {
+        gap: 12px;
+    }
+
 }
