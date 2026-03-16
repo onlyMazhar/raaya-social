@@ -66,7 +66,7 @@
 }
 
 body {
-    background-color: #D0D5DD;
+    background-color:  #f5f5f5;
     font-family: var(--font-main);
     overflow-x: hidden;
 }
@@ -97,8 +97,9 @@ p {
 }
 
 .btn {
+    cursor: pointer;
     background-color: transparent;
-    border: 1px solid #D0D5DD;
+    border: 1px solid #e0e0e0;
     border-radius: 24px;
     padding: 8px 27px;
     color: black;
@@ -316,6 +317,29 @@ nav {
     background-color: #007AB9;
 }
 
+/********************************/
+/*    Clients Section Styles       */
+/********************************/
+.clients{
+    background-color: var(--lite);
+    padding: 48px 0;
+}
+
+.clients-number{
+    width: 260px;
+    /* padding-right: 71px; */
+    flex: 1;
+}
+.clients-company-logo{
+    margin-left: 71px;
+    display: flex;
+    flex-direction: row;
+    gap: 27px;
+}
+
+.clients-company-logo img {
+    height: 48px;
+}
 
 
 
@@ -467,9 +491,8 @@ nav {
 
     .bottom-container {
         width: fit-content;
-        margin-top: 20px;
         padding: 14px 16px;
-        margin: 16px 16px 0;
+        margin: 16px 16px 32px;
 
     }
 
