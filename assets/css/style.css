@@ -785,7 +785,7 @@ nav {
 /********************************/
 /*             FAQ              */
 /********************************/
- .faq-header {
+.faq-header {
     text-align: center;
     margin-bottom: 40px;
 }
@@ -800,7 +800,7 @@ nav {
     margin: 0 auto;
 }
 
- .faq-accordion {
+.faq-accordion {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -815,7 +815,7 @@ nav {
     transition: all 0.3s ease;
 }
 
- .faq-question {
+.faq-question {
     font-family: var(--font-main);
     width: 100%;
     padding: 24px;
@@ -866,7 +866,7 @@ nav {
     opacity: 0;
 }
 
- .faq-answer {
+.faq-answer {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.3s ease;
@@ -1030,6 +1030,110 @@ nav {
 }
 
 
+
+
+
+/********************************/
+/*        Footer Styles         */
+/********************************/
+footer {
+    padding: 80px 0 40px;
+    background: var(--lite);
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+ .footer-logo {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.footer-brand h3,
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    color: #475467;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.footer-btns {
+    display: flex;
+    gap: 12px;
+}
+ 
+
+.btn-purple {
+    background: #9945FF;
+    color: white;
+}
+
+ .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #475467;
+    font-size: 14px;
+}
+
+ .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 16px;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 80px;
+    resize: none;
+}
+
+.btn-submit {
+    background: #1D1D1D;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+ .footer-bottom {
+    border-top: 1px solid #EAECF0;
+    padding-top: 30px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 14px;
+} 
 
 
 
