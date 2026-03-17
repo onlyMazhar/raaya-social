@@ -16,13 +16,11 @@ toggleBtn.addEventListener("click", () => {
 document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
         const currentItem = button.parentElement;
-        
-        // Optional: Close other items when one is opened
+
         document.querySelectorAll('.faq-item').forEach(item => {
             if (item !== currentItem) item.classList.remove('active');
         });
 
-        // Toggle the clicked item
         currentItem.classList.toggle('active');
     });
 });
