@@ -349,7 +349,7 @@ nav {
 }
 
 .clients-number {
-    max-width: 265px;
+    /* max-width: 265px; */
     z-index: 11;
     position: relative;
     background-color: var(--lite);
@@ -359,8 +359,7 @@ nav {
     border-image-source: linear-gradient(to bottom, transparent 0%, #363636 40%, #000000 40%, transparent 100%);
     border-image-slice: 1;
 
-    /* padding-right: 40px;
-    margin-right: 40px; */
+    padding-right: 40px;
 }
 
 .clients p {
@@ -427,9 +426,9 @@ nav {
     border-radius: var(--border-radius);
 }
 
-.we-provide button {
-    margin: 48px auto 0;
-    text-align: center;
+.we-provide > div  button {
+    width: fit-content;
+    margin: 48px auto 0; 
 }
 
 
@@ -1049,7 +1048,7 @@ footer {
     padding-bottom: 60px;
 }
 
- .footer-logo {
+.footer-logo {
     font-size: 32px;
     font-weight: 800;
     margin-bottom: 24px;
@@ -1073,14 +1072,14 @@ footer {
     display: flex;
     gap: 12px;
 }
- 
+
 
 .btn-purple {
     background: #9945FF;
     color: white;
 }
 
- .footer-links ul {
+.footer-links ul {
     list-style: none;
     padding: 0;
 }
@@ -1095,7 +1094,7 @@ footer {
     font-size: 14px;
 }
 
- .contact-form {
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -1127,13 +1126,13 @@ footer {
     gap: 8px;
 }
 
- .footer-bottom {
+.footer-bottom {
     border-top: 1px solid #EAECF0;
     padding-top: 30px;
     text-align: center;
     color: var(--secondary-color);
     font-size: 14px;
-} 
+}
 
 
 
@@ -1144,10 +1143,8 @@ footer {
     :root {
         --h1: 42px;
         --h1-line: 58px;
-
         --h2: 36px;
         --h2-line: 48px;
-
         --p1: 16px;
         --p1-line: 26px;
     }
@@ -1156,6 +1153,7 @@ footer {
         padding: 0 32px;
     }
 
+    /* Nav */
     .nav-actions {
         background-color: var(--lite);
         flex-direction: column;
@@ -1190,15 +1188,10 @@ footer {
         z-index: 101;
     }
 
-    /*  Hero   */
+    /* Hero */
     .top-container {
         gap: 20px;
         padding-top: 20px;
-    }
-
-    .badge {
-        width: fit-content;
-        /* margin-top: 16px; */
     }
 
     .hero-content {
@@ -1230,29 +1223,112 @@ footer {
     .bottom-container {
         width: 45%;
         margin-bottom: 36px;
-
     }
 
+    /* Services */
+    .heading {
+        max-width: 80%;
+    }
+
+    .we-provide {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .card-item {
+        width: 100%;
+    }
+
+    .service-divider {
+        margin: 0 24px;
+    }
+
+    .price-card {
+        gap: 40px;
+    }
+
+    /* Features grid */
+    .top-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bottom-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Videos */
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .thumbnail {
+        height: 260px;
+    }
+
+    /* Stories */
+    .video-story-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Testimonials */
+    .testimonial-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .test-card.large {
+        grid-column: span 2;
+    }
+
+    .test-card.small {
+        grid-column: span 2;
+    }
+
+    /* About */
+    .flex-center {
+        gap: 40px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
 }
+
 
 /********************************/
 /*    Responsive For Mobile     */
 /********************************/
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     :root {
         --h1: 32px;
         --h1-line: 44px;
-
         --h2: 28px;
         --h2-line: 38px;
-
+        --h3: 24px;
+        --h3-line: 34px;
+        --h4: 20px;
+        --h4-line: 28px;
         --p1: 15px;
+        --p1-line: 24px;
+        --p2: 14px;
+        --p2-line: 22px;
     }
 
     .container {
         padding: 0 16px;
     }
 
+    .py-100 {
+        padding: 60px 0;
+    }
+
+    /* Nav */
+    .toggle {
+        display: block;
+    }
+
+    /* Hero */
     .top-container {
         flex-direction: column-reverse;
         text-align: center;
@@ -1288,11 +1364,160 @@ footer {
         width: fit-content;
         padding: 14px 16px;
         margin: 16px 16px 32px;
-
     }
 
     .social-icons {
         gap: 12px;
     }
+
+    /* Services */
+    .heading {
+        max-width: 100%;
+    }
+
+    .we-provide {
+        flex-direction: column;
+        gap: 32px;
+        padding: 24px 16px;
+    }
+
+    .service-divider {
+        display: none;
+    }
+
+    .service-list {
+        width: 100%;
+    }
+
+    .card-item {
+        width: 100%;
+    }
+
+    .service-price {
+        width: 100%;
+    }
+
+    .service-price button {
+        flex-direction: column;
+    }
+
+    .price-card {
+        gap: 16px;
+    }
+
+    .service-title {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .service-list div:nth-child(3) {
+        margin: 16px 0;
+    }
+
+    .we-provide button {
+        margin-top: 32px;
+        width: 100%;
+    }
+
+    /* Features grid */
+    .top-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Videos */
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .thumbnail {
+        height: 200px;
+    }
+
+    .video-title {
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .next-arrow {
+        display: none;
+    }
+
+    /* Stories */
+    .video-story-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-title {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    /* Testimonials */
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .test-card.large {
+        grid-column: span 1;
+    }
+
+    .test-card.small {
+        grid-column: span 1;
+    }
+
+    /* About */
+    .flex-center {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content p {
+        margin-bottom: 24px;
+    }
+
+    /* FAQ */
+    .faq-title {
+        font-size: 28px;
+    }
+
+    .faq-question {
+        font-size: 15px;
+        padding: 18px 16px;
+    }
+
+    .faq-answer {
+        padding: 0 16px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding-bottom: 16px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+    .btn-submit{
+        width: fit-content;
+    } 
 
 }
